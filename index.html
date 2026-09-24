@@ -27,7 +27,7 @@
       background: #fff;
       padding: 40px;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     }
 
     .header {
@@ -94,7 +94,7 @@
     textarea:focus {
       outline: none;
       border-color: #16744a;
-      box-shadow: 0 0 0 2px rgba(22, 116, 74, 0.1);
+      box-shadow: 0 0 0 2px rgba(22,116,74,0.1);
     }
 
     textarea {
@@ -124,7 +124,7 @@
       background: #f1f8f4;
       border-left: 4px solid #16744a;
       padding: 15px;
-      margin-top: 15px;
+      margin-bottom: 30px;
       color: #444;
       font-size: 14px;
     }
@@ -164,8 +164,28 @@
     }
 
     button:disabled {
-      background: #7a9c8c;
+      opacity: 0.7;
       cursor: not-allowed;
+    }
+
+    .message {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .success-message {
+      background: #f1f8f4;
+      color: #16744a;
+      border-left: 4px solid #16744a;
+    }
+
+    .error-message {
+      background: #fff1f1;
+      color: #a00000;
+      border-left: 4px solid #a00000;
     }
 
     .footer-note {
@@ -173,33 +193,6 @@
       margin-top: 25px;
       color: #777;
       font-size: 13px;
-    }
-
-    .required-note {
-      margin-bottom: 20px;
-      font-size: 13px;
-      color: #777;
-    }
-
-    .success-message,
-    .error-message {
-      display: none;
-      padding: 15px;
-      border-radius: 7px;
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    .success-message {
-      background: #eaf7ef;
-      color: #17663f;
-      border: 1px solid #b8dec8;
-    }
-
-    .error-message {
-      background: #fff0f0;
-      color: #a33a3a;
-      border: 1px solid #e2bcbc;
     }
 
     @media (max-width: 650px) {
@@ -230,22 +223,12 @@
 
   <!-- Header -->
   <div class="header">
-    <h1>Remote Financial &amp; Accounts Assistant</h1>
-    <p>Applicant Information &amp; Application Form</p>
+    <h1>Remote Financial & Accounts Assistant</h1>
+    <p>Applicant Information & Identification Form</p>
   </div>
 
-  <p class="required-note">
-    Fields marked with * are required.
-  </p>
 
-  <!--
-    IMPORTANT:
-    Replace YOUR_FORM_ID below with your actual Formspree form ID.
-
-    Example:
-    https://formspree.io/f/abcdwxyz
-  -->
-
+  <!-- APPLICATION FORM -->
   <form
     id="applicationForm"
     action="https://formspree.io/f/xeaozzqv"
@@ -277,15 +260,14 @@
 
         <div class="form-group">
           <label for="fullname">
-            Full Legal Name *
+            Full Legal Name
           </label>
 
           <input
             type="text"
             id="fullname"
-            name="Full Legal Name"
+            name="fullname"
             required
-            autocomplete="name"
           >
         </div>
 
@@ -298,50 +280,48 @@
           <input
             type="text"
             id="preferred-name"
-            name="Preferred Name"
+            name="preferred_name"
           >
         </div>
 
 
         <div class="form-group">
           <label for="phone">
-            Phone Number *
+            Phone Number
           </label>
 
           <input
             type="tel"
             id="phone"
-            name="Phone Number"
+            name="phone"
             required
-            autocomplete="tel"
           >
         </div>
 
 
         <div class="form-group">
           <label for="email">
-            Email Address *
+            Email Address
           </label>
 
           <input
             type="email"
             id="email"
-            name="Email Address"
+            name="email"
             required
-            autocomplete="email"
           >
         </div>
 
 
         <div class="form-group">
           <label for="city">
-            Current City &amp; State
+            Current City & State
           </label>
 
           <input
             type="text"
             id="city"
-            name="Current City and State"
+            name="city"
           >
         </div>
 
@@ -354,46 +334,26 @@
           <input
             type="text"
             id="location"
-            name="Remote Work Location"
+            name="location"
           >
         </div>
 
       </div>
-
     </div>
 
 
-    <!-- Identity Verification Notice -->
-    <div class="section">
-
-      <h2 class="section-title">
-        Identity Verification
-      </h2>
-
-      <div class="notice">
-
-        <strong>Important:</strong>
-
-        Government identification and other sensitive verification
-        documents are not requested through this application form.
-
-        If identity verification is required later in the hiring process,
-        applicants will be directed to the company's designated secure
-        verification process.
-
-      </div>
-
-    </div>
+    
 
 
     <!-- 2. Education & Experience -->
     <div class="section">
 
       <h2 class="section-title">
-        2. Education &amp; Experience
+        2. Education & Experience
       </h2>
 
       <div class="form-grid">
+
 
         <div class="form-group">
 
@@ -403,7 +363,7 @@
 
           <select
             id="education"
-            name="Highest Level of Education"
+            name="education"
           >
 
             <option value="">
@@ -448,7 +408,7 @@
           <input
             type="text"
             id="school"
-            name="School or University"
+            name="school"
           >
 
         </div>
@@ -463,7 +423,7 @@
           <input
             type="text"
             id="field"
-            name="Field of Study"
+            name="field"
           >
 
         </div>
@@ -478,8 +438,7 @@
           <input
             type="text"
             id="graduation"
-            name="Expected Graduation Date"
-            placeholder="Example: May 2027"
+            name="graduation"
           >
 
         </div>
@@ -493,8 +452,8 @@
 
           <textarea
             id="experience"
-            name="Previous Accounting or Finance Experience"
-            placeholder="Briefly describe your relevant experience..."
+            name="experience"
+            placeholder="Optional, briefly describe your relevant experience..."
           ></textarea>
 
         </div>
@@ -508,53 +467,69 @@
 
           <div class="checkbox-group">
 
+
             <label class="checkbox-item">
+
               <input
                 type="checkbox"
-                name="Software Used"
+                name="software[]"
                 value="QuickBooks"
               >
+
               QuickBooks
+
             </label>
 
 
             <label class="checkbox-item">
+
               <input
                 type="checkbox"
-                name="Software Used"
+                name="software[]"
                 value="Excel / Microsoft Office"
               >
+
               Excel / Microsoft Office
+
             </label>
 
 
             <label class="checkbox-item">
+
               <input
                 type="checkbox"
-                name="Software Used"
+                name="software[]"
                 value="Google Sheets"
               >
+
               Google Sheets
+
             </label>
 
 
             <label class="checkbox-item">
+
               <input
                 type="checkbox"
-                name="Software Used"
+                name="software[]"
                 value="Xero"
               >
+
               Xero
+
             </label>
 
 
             <label class="checkbox-item">
+
               <input
                 type="checkbox"
-                name="Software Used"
+                name="software[]"
                 value="FreshBooks"
               >
+
               FreshBooks
+
             </label>
 
           </div>
@@ -566,7 +541,7 @@
     </div>
 
 
-    <!-- 3. Remote Work -->
+    <!-- 3. Remote Work Information -->
     <div class="section">
 
       <h2 class="section-title">
@@ -576,31 +551,39 @@
       <div class="form-grid">
 
 
+        <!-- Internet -->
         <div class="form-group">
 
           <label>
-            Reliable Internet Access? *
+            Reliable Internet Access?
           </label>
 
           <div class="checkbox-group">
 
             <label class="checkbox-item">
+
               <input
                 type="radio"
-                name="Reliable Internet Access"
+                name="internet"
                 value="Yes"
                 required
               >
+
               Yes
+
             </label>
 
+
             <label class="checkbox-item">
+
               <input
                 type="radio"
-                name="Reliable Internet Access"
+                name="internet"
                 value="No"
               >
+
               No
+
             </label>
 
           </div>
@@ -608,6 +591,7 @@
         </div>
 
 
+        <!-- Computer -->
         <div class="form-group">
 
           <label>
@@ -617,21 +601,28 @@
           <div class="checkbox-group">
 
             <label class="checkbox-item">
+
               <input
                 type="radio"
-                name="Computer Suitable for Remote Work"
+                name="computer"
                 value="Yes"
               >
+
               Yes
+
             </label>
 
+
             <label class="checkbox-item">
+
               <input
                 type="radio"
-                name="Computer Suitable for Remote Work"
+                name="computer"
                 value="No"
               >
+
               No
+
             </label>
 
           </div>
@@ -639,6 +630,7 @@
         </div>
 
 
+        <!-- Backup -->
         <div class="form-group">
 
           <label>
@@ -648,21 +640,28 @@
           <div class="checkbox-group">
 
             <label class="checkbox-item">
+
               <input
                 type="radio"
-                name="Internet or Power Backup"
+                name="backup"
                 value="Yes"
               >
+
               Yes
+
             </label>
 
+
             <label class="checkbox-item">
+
               <input
                 type="radio"
-                name="Internet or Power Backup"
+                name="backup"
                 value="No"
               >
+
               No
+
             </label>
 
           </div>
@@ -670,6 +669,7 @@
         </div>
 
 
+        <!-- Hours -->
         <div class="form-group">
 
           <label for="hours">
@@ -679,5 +679,544 @@
           <input
             type="number"
             id="hours"
-            name="Hours Availab
+            name="hours"
+            min="1"
+          >
+
+        </div>
+
+
+        <!-- Time Zone -->
+        <div class="form-group">
+
+          <label for="timezone">
+            Time Zone
+          </label>
+
+          <input
+            type="text"
+            id="timezone"
+            name="timezone"
+            placeholder="Example: EST, CST, PST"
+          >
+
+        </div>
+
+
+        <!-- Schedule -->
+        <div class="form-group">
+
+          <label>
+            Preferred Work Schedule
+          </label>
+
+          <div class="checkbox-group">
+
+
+            <label class="checkbox-item">
+
+              <input
+                type="checkbox"
+                name="schedule[]"
+                value="Full-Time"
+              >
+
+              Full-Time
+
+            </label>
+
+
+            <label class="checkbox-item">
+
+              <input
+                type="checkbox"
+                name="schedule[]"
+                value="Part-Time"
+              >
+
+              Part-Time
+
+            </label>
+
+
+            <label class="checkbox-item">
+
+              <input
+                type="checkbox"
+                name="schedule[]"
+                value="Evenings"
+              >
+
+              Evenings
+
+            </label>
+
+
+            <label class="checkbox-item">
+
+              <input
+                type="checkbox"
+                name="schedule[]"
+                value="Weekends"
+              >
+
+              Weekends
+
+            </label>
+
+
+            <label class="checkbox-item">
+
+              <input
+                type="checkbox"
+                name="schedule[]"
+                value="Flexible"
+              >
+
+              Flexible
+
+            </label>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- 4. Position Responsibilities -->
+    <div class="section">
+
+      <h2 class="section-title">
+        4. Position Responsibilities
+      </h2>
+
+
+      <ul class="responsibilities">
+
+        <li>
+          Recording and organizing company financial transactions
+        </li>
+
+        <li>
+          Maintaining invoices and payment records
+        </li>
+
+        <li>
+          Tracking accounts payable and receivable
+        </li>
+
+        <li>
+          Preparing basic financial reports
+        </li>
+
+        <li>
+          Monitoring company expenses
+        </li>
+
+        <li>
+          Organizing receipts and supporting documentation
+        </li>
+
+        <li>
+          Assisting with payroll-related records
+        </li>
+
+        <li>
+          Reconciling financial information
+        </li>
+
+        <li>
+          Communicating with vendors and service providers
+        </li>
+
+        <li>
+          Maintaining confidential company financial information
+        </li>
+
+        <li>
+          Assisting management with administrative and accounting tasks
+        </li>
+
+      </ul>
+
+
+      <div class="notice" style="margin-top:20px;margin-bottom:0;">
+
+        <strong>Important:</strong>
+
+        Employees will only be authorized to handle company
+        payments, bank-related activity, or financial transfers
+        when specifically approved by authorized company management.
+
+      </div>
+
+    </div>
+
+
+    <!-- 5. References -->
+    <div class="section">
+
+      <h2 class="section-title">
+        5. References
+      </h2>
+
+
+      <h3>
+        Professional / Academic Reference #1
+      </h3>
+
+      <br>
+
+
+      <div class="form-grid">
+
+
+        <div class="form-group">
+
+          <label for="ref1name">
+            Name
+          </label>
+
+          <input
+            type="text"
+            id="ref1name"
+            name="ref1_name"
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="ref1relationship">
+            Relationship
+          </label>
+
+          <input
+            type="text"
+            id="ref1relationship"
+            name="ref1_relationship"
+          >
+
+        </div>
+
+
+        <div class="form-group full-width">
+
+          <label for="ref1contact">
+            Phone / Email
+          </label>
+
+          <input
+            type="text"
+            id="ref1contact"
+            name="ref1_contact"
+          >
+
+        </div>
+
+      </div>
+
+
+      <br>
+
+
+      <h3>
+        Professional / Academic Reference #2
+      </h3>
+
+      <br>
+
+
+      <div class="form-grid">
+
+
+        <div class="form-group">
+
+          <label for="ref2name">
+            Name
+          </label>
+
+          <input
+            type="text"
+            id="ref2name"
+            name="ref2_name"
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="ref2relationship">
+            Relationship
+          </label>
+
+          <input
+            type="text"
+            id="ref2relationship"
+            name="ref2_relationship"
+          >
+
+        </div>
+
+
+        <div class="form-group full-width">
+
+          <label for="ref2contact">
+            Phone / Email
+          </label>
+
+          <input
+            type="text"
+            id="ref2contact"
+            name="ref2_contact"
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- 6. Applicant Certification -->
+    <div class="section">
+
+      <h2 class="section-title">
+        6. Applicant Certification
+      </h2>
+
+
+      <p>
+        I certify that the information provided on this application
+        is accurate and complete to the best of my knowledge.
+        I understand that employment is subject to verification
+        of qualifications and completion of any required employment
+        documentation.
+      </p>
+
+
+      <br>
+
+
+      <p>
+        I understand that confidential company information must be
+        protected and that access to company financial accounts,
+        payment systems, or financial records will be limited
+        according to company authorization and applicable policies.
+      </p>
+
+
+      <br>
+
+
+      <div class="signature-grid">
+
+
+        <div class="form-group">
+
+          <label for="signature">
+            Applicant Name / Electronic Signature
+          </label>
+
+          <input
+            type="text"
+            id="signature"
+            name="signature"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="date">
+            Date
+          </label>
+
+          <input
+            type="date"
+            id="date"
+            name="date"
+            required
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- Submit -->
+    <div class="submit-area">
+
+      <button
+        type="submit"
+        id="submitButton"
+      >
+        Submit Application
+      </button>
+
+    </div>
+
+
+    <!-- Success Message -->
+    <div
+      id="successMessage"
+      class="message success-message"
+    >
+
+      <strong>
+        Application submitted successfully.
+      </strong>
+
+      <br>
+
+      Thank you for applying. Your application has been received.
+
+    </div>
+
+
+    <!-- Error Message -->
+    <div
+      id="errorMessage"
+      class="message error-message"
+    >
+
+      <strong>
+        Submission failed.
+      </strong>
+
+      <br>
+
+      Please check your internet connection and try again.
+
+    </div>
+
+
+    <!-- Footer -->
+    <p class="footer-note">
+
+      Remote employment application • All information will be handled
+      according to applicable company policies and law.
+
+    </p>
+
+  </form>
+
+</div>
+
+
+<!-- Form Submission JavaScript -->
+<script>
+
+  const form = document.getElementById("applicationForm");
+
+  const submitButton =
+    document.getElementById("submitButton");
+
+  const successMessage =
+    document.getElementById("successMessage");
+
+  const errorMessage =
+    document.getElementById("errorMessage");
+
+
+  form.addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+
+    // Hide previous messages
+    successMessage.style.display = "none";
+    errorMessage.style.display = "none";
+
+
+    // Disable button while submitting
+    submitButton.disabled = true;
+    submitButton.textContent = "Submitting...";
+
+
+    try {
+
+      const response = await fetch(
+        form.action,
+        {
+          method: "POST",
+
+          body: new FormData(form),
+
+          headers: {
+            "Accept": "application/json"
+          }
+        }
+      );
+
+
+      if (response.ok) {
+
+        // Clear the form
+        form.reset();
+
+
+        // Show success message
+        successMessage.style.display = "block";
+
+
+        // Restore button
+        submitButton.disabled = false;
+        submitButton.textContent = "Submit Application";
+
+
+        // Scroll to success message
+        successMessage.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+
+      } else {
+
+        throw new Error(
+          "Form submission failed"
+        );
+
+      }
+
+    } catch (error) {
+
+      console.error(
+        "Submission error:",
+        error
+      );
+
+
+      // Show error message
+      errorMessage.style.display = "block";
+
+
+      // Restore button
+      submitButton.disabled = false;
+      submitButton.textContent = "Submit Application";
+
+
+      // Scroll to error message
+      errorMessage.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+
+    }
+
+  });
+
+</script>
+
+</body>
+</html>
 ```
